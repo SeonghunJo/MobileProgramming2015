@@ -1,2 +1,2 @@
 # javalab4
-20083278 Á¶¼ºÈÆ
+20083278 Seonghun Jo
