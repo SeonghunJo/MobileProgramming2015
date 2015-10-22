@@ -20,10 +20,18 @@ public class DiscountSale extends Sale {
 	 */
 	public DiscountSale(String theName, double thePrice, double theDiscount) {
 		/** 구현 하시오 **/ 
+		super();
+		super.setName(theName);
+		super.setPrice(thePrice);
+		discount = theDiscount;
 	}
 	
 	public DiscountSale(DiscountSale originalObject) {
 		/** 구현 하시오 **/ 
+		super();
+		super.setName(originalObject.getName());
+		super.setPrice(originalObject.getPrice());
+		discount = originalObject.getDiscount();
 	}
 	
 	public static void announcement() {
@@ -31,11 +39,13 @@ public class DiscountSale extends Sale {
 	}
 	
 	public double bill() {
-		/** 구현 하시오 **/ 
+		/** 구현 하시오 **/
+		return super.getPrice() - (super.getPrice() * discount/100);
 	}
 	
 	public double getDiscount() {
-		/** 구현 하시오 **/ 
+		/** 구현 하시오 **/
+		return discount;
 	}
 	
 	/**
@@ -43,6 +53,7 @@ public class DiscountSale extends Sale {
 	 */
 	public void setDiscount(double newDiscount) {
 		/** 구현 하시오 **/ 
+		discount = newDiscount;
 	}
 	
 	public String toString() {
@@ -51,10 +62,19 @@ public class DiscountSale extends Sale {
 	
 	public boolean equals(Object otherObject) {
 		/** 구현 하시오 **/ 
+		if (otherObject == null)
+			return false;
+		else if (getClass() != otherObject.getClass())
+			return false;
+		else {
+			DiscountSale otherSale = (DiscountSale) otherObject;
+			return (super.getPrice() == otherSale.getPrice()) && (super.getName() == otherSale.getName()) && (discount == otherSale.getDiscount());
+		}
 	}
 	
 	
 	public DiscountSale clone() {
 		/** 구현 하시오....  임시생성자 사용 **/ 
+		return (new DiscountSale(super.getName(), super.getPrice(), discount));
 	}
 }
