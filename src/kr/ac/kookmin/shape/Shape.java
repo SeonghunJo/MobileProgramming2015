@@ -3,20 +3,14 @@ package kr.ac.kookmin.shape;
 public abstract class Shape {
     protected Point center;
 
-    Shape(Point c)
+    public Shape(Point c)
     {
     	center = c;
     }
     
-    public void draw(Graphics g)
-    {
-    	
-    }
+    abstract public void draw(Graphics g);
     
-    public Rectangle getBounds()
-    {
-    	return null;
-    }	
+    abstract public Rectangle getBounds();
     
     public Point getCenter()
     {

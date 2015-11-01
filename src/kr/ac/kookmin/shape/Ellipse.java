@@ -6,7 +6,8 @@ public class Ellipse extends Shape {
 	
 	public Ellipse(Point center, int w, int h) {
 		super(center);
-		
+		this.w = w;
+		this.h = h;
 	}
 
 	public Rectangle getBounds() {
