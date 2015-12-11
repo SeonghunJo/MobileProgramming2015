@@ -12,7 +12,7 @@ import com.google.android.gms.maps.model.MarkerOptions;
 
 public class MainActivity extends AppCompatActivity {
 
-    static final LatLng SEOUL = new LatLng( 37.56, 126.97);
+    static final LatLng SEOUL = new LatLng(37.56, 126.97);
     private GoogleMap map;
 
     @Override
