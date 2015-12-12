@@ -1,4 +1,4 @@
-package org.iptime.seonghunjo.iamhere;
+package org.iptime.seonghun.iamhere;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;
